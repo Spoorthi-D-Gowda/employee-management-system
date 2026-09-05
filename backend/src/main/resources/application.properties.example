@@ -1,0 +1,37 @@
+﻿spring.application.name=employee-management-backend
+server.port=8080
+
+# H2 Database Configuration
+spring.datasource.url=jdbc:h2:mem:employeedb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+spring.datasource.driverClassName=org.h2.Driver
+spring.datasource.username=sa
+spring.datasource.password=
+spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
+
+# H2 Console (for debugging)
+spring.h2.console.enabled=true
+spring.h2.console.path=/h2-console
+
+# JPA Hibernate
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.format_sql=true
+
+# JWT Secret & Expiration (24 hours in milliseconds)
+app.jwt.secret=9a2f8c4e6b1d3a5f7e9c2b4a6d8f1e3c5a7b9d2e4f6a8c1e3b5d7f9a2c4e6b1d
+app.jwt.expiration-milliseconds=86400000
+
+# Gmail SMTP Configuration
+spring.mail.host=smtp.gmail.com
+spring.mail.port=587
+spring.mail.username=your-email@gmail.com
+spring.mail.password=your-gmail-app-password
+spring.mail.properties.mail.smtp.auth=true
+spring.mail.properties.mail.smtp.starttls.enable=true
+spring.mail.properties.mail.smtp.starttls.required=true
+spring.mail.properties.mail.smtp.connectiontimeout=5000
+spring.mail.properties.mail.smtp.timeout=5000
+
+# Logging
+logging.level.org.springframework.security=INFO
+logging.level.com.employeemanagement=DEBUG

@@ -15,6 +15,9 @@ build/
 .env.development.local
 .env.test.local
 .env.production.local
+application.properties
+**/application.properties
+!**/application.properties.example
 
 # IDE & Editor files
 .idea/
